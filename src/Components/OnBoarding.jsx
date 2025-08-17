@@ -77,8 +77,6 @@ const OnBoarding = () => {
                         ))
                     }
                 </div>
-
-                
             </div>
         </div>
     )
