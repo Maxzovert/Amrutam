@@ -6,6 +6,7 @@ import OnBoarding from "./Components/OnBoarding"
 import Testimonial from "./Components/Testimonial"
 import Faqs from "./Components/Faqs"
 import GetStarted from "./Components/GetStarted"
+import LetsConnect from "./Components/LetsConnect"
 
 const App = () => {
   return (
@@ -17,6 +18,7 @@ const App = () => {
     <Testimonial/>
     <Faqs/>
     <GetStarted/>
+    <LetsConnect/>
     </>
   )
 }
