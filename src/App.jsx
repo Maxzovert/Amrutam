@@ -5,6 +5,7 @@ import WhyUs from "./Components/WhyUs"
 import OnBoarding from "./Components/OnBoarding"
 import Testimonial from "./Components/Testimonial"
 import Faqs from "./Components/Faqs"
+import GetStarted from "./Components/GetStarted"
 
 const App = () => {
   return (
@@ -15,6 +16,7 @@ const App = () => {
     <OnBoarding/>
     <Testimonial/>
     <Faqs/>
+    <GetStarted/>
     </>
   )
 }

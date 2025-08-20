@@ -72,7 +72,7 @@ const Faqs = () => {
                 ))}
             </div>
 
-            <div className="flex items-center justify-center !mt-[48px] w-full">
+            <div className="flex items-center justify-center !mt-[48px] w-full !mb-[32px]">
                 <button className="bg-[#3A643C] text-white px-7 py-7 w-[163px] h-[56px] rounded-[12px] font-semibold shadow-lg hover:bg-green-800 transition !ml-[10px]">
                     See More
                 </button>
