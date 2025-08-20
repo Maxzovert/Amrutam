@@ -7,6 +7,7 @@ import Testimonial from "./Components/Testimonial"
 import Faqs from "./Components/Faqs"
 import GetStarted from "./Components/GetStarted"
 import LetsConnect from "./Components/LetsConnect"
+import Footer from "./Components/Footer"
 
 const App = () => {
   return (
@@ -19,6 +20,7 @@ const App = () => {
     <Faqs/>
     <GetStarted/>
     <LetsConnect/>
+    <Footer/>
     </>
   )
 }

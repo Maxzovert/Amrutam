@@ -3,7 +3,7 @@ import LetsConnectImg from "../assets/LetsConnect.png";
 
 const LetsConnect = () => {
   return (
-    <div className="flex items-center justify-center flex-col py-16 bg-[#FAF5E6] w-full">
+    <div className="flex items-center justify-center flex-col py-16 w-full !mt-[40px]">
       <div className="text-center mb-12 max-w-2xl">
         <h1 className="text-[#33643F] text-4xl font-bold font-dm-sans">
           Let’s Connect
