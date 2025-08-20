@@ -22,7 +22,7 @@ const Features = () => {
         { logos: C_9 },
     ]
     return (
-        <div className="w-full h-[300px] flex flex-col items-center gap-1">
+        <section className="w-full h-[300px] flex flex-col items-center gap-1">
             <div className="!mt-8 flex flex-col justify-center items-center">
                 <h1 className="text-[#33643F] text-[40px] font-bold font-dm-sans">Featured</h1>
                 <p className="font-dm-sans text-[20px] text-[#4C4C4C]">Recognized and celebrated by leading publications – Amrutam in the spotlight!</p>
@@ -39,7 +39,7 @@ const Features = () => {
                     ))
                 }
             </div>
-        </div>
+        </section>
     )
 }
 

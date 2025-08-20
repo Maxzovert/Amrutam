@@ -90,7 +90,6 @@ const OnBoarding = () => {
                     {
                         STEPS.map((step, idx) => (
                             <div key={idx} className="group w-[579px] h-[110px] border border-[#3A643C] rounded-[8px] flex justify-center flex-col !pl-8 !mb-[18px] hover:bg-[#33643F] transition-all duration-700 ease-in-out">
-
                                 <h1 className="!mb-[10px] text-[#3A643C] font-dm-sans font-extrabold text-[20px] group-hover:text-white">{step.step}</h1>
                                 <p className="font-dm-sans font-medium text-[#3A643C] text-[14px] group-hover:text-white">{step.desc}</p>
                             </div>
@@ -122,7 +121,7 @@ const OnBoarding = () => {
                             key={idx}
                             onClick={() => handleClick(btn.btn)}
                             className={`h-[48px] border border-[#3A643C] rounded-[8px] !p-[12px] max-w-[219px] font-dm-sans text-[#3A643C] transition-all duration-700 ease-in-out
-              ${selected === btn.btn
+                                    ${selected === btn.btn
                                     ? "bg-[#33643F] text-white"
                                     : "text-[#3A643C] bg-transparent"
                                 }`}
