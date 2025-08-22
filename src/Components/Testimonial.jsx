@@ -1,6 +1,6 @@
 import React from 'react';
 import ProfilePic from '../assets/Testimonials/ProfilePic.svg';
-import FilledStar from '../assets/Testimonials/StartFilled.svg';
+import FilledStar from '../assets/Testimonials/StartFIlled.svg';
 import BlankStar from '../assets/Testimonials/StarBlank.svg'
 
 const Testimonial = () => {
