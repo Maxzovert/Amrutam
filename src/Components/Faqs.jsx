@@ -41,39 +41,39 @@ const Faqs = () => {
     ];
 
     return (
-        <section className="max-h-[1440px] w-full px-8 !mt-12 flex justify-center items-center flex-col">
-            <div className="text-center mb-16">
-                <h1 className="text-[#33643F] text-[44px] font-bold font-dm-sans">
+        <section className="max-h-none md:max-h-[1440px] w-full px-4 md:px-8 !mt-8 md:!mt-12 flex justify-center items-center flex-col">
+            <div className="text-center mb-8 md:mb-16">
+                <h1 className="text-[#33643F] text-[28px] md:text-[36px] lg:text-[44px] font-bold font-dm-sans leading-tight">
                     Frequently Asked Questions
                 </h1>
-                <p className="font-dm-sans text-[22px] text-[#4C4C4C] mt-2">
+                <p className="font-dm-sans text-[16px] md:text-[18px] lg:text-[22px] text-[#4C4C4C] mt-2 max-w-[600px] mx-auto leading-relaxed">
                     Find quick answers to common questions to help you navigate the app and its features easily.
                 </p>
             </div>
 
-            <div className="space-y-4 !mt-[48px] w-[1030px] flex flex-col justify-between h-[442px]">
+            <div className="space-y-3 md:space-y-4 !mt-6 md:!mt-[48px] w-full max-w-[1030px] flex flex-col justify-between h-auto md:h-[442px]">
                 {faqs.map((faq, index) => (
                     <div
                         key={index}
-                        className={`border-b border-gray-300 cursor-pointer w-[1030px] overflow-hidden transition-all duration-300 ${openIndex === index ? "h-[120px]" : "h-[52px]"
+                        className={`border-b border-gray-300 cursor-pointer w-full overflow-hidden transition-all duration-300 ${openIndex === index ? "h-auto min-h-[120px] md:h-[120px]" : "h-[52px]"
                             }`}
                         onClick={() => toggle(index)}
                     >
-                        <div className="flex justify-between items-center w-full font-medium text-[#666666] font-dm-sans text-[20px] h-[52px] !py-[26px]">
+                        <div className="flex justify-between items-center w-full font-medium text-[#666666] font-dm-sans text-[16px] md:text-[18px] lg:text-[20px] h-[52px] !py-[20px] md:!py-[26px] !px-2 md:!px-0">
                             {faq.question}
-                            <span className="text-xl">
+                            <span className="text-lg md:text-xl">
                                 {openIndex === index ? "" : "+"}
                             </span>
                         </div>
                         {openIndex === index && (
-                            <p className="text-gray-600 text-sm pr-4">{faq.answer}</p>
+                            <p className="text-gray-600 text-sm md:text-sm pr-2 md:pr-4 pb-4 md:pb-0 leading-relaxed">{faq.answer}</p>
                         )}
                     </div>
                 ))}
             </div>
 
-            <div className="flex items-center justify-center !mt-[48px] w-full !mb-[32px]">
-                <button className="bg-[#3A643C] text-white px-7 py-7 w-[163px] h-[56px] rounded-[12px] font-semibold shadow-lg hover:bg-green-800 transition !ml-[10px]">
+            <div className="flex items-center justify-center !mt-8 md:!mt-[48px] w-full !mb-6 md:!mb-[32px]">
+                <button className="bg-[#3A643C] text-white px-6 md:px-7 py-4 md:py-7 w-full max-w-[300px] md:w-[163px] h-[56px] rounded-[12px] font-semibold shadow-lg hover:bg-green-800 transition !ml-0 md:!ml-[10px]">
                     See More
                 </button>
             </div>
@@ -82,4 +82,4 @@ const Faqs = () => {
     );
 };
 
-export default Faqs;
+export default Faqs

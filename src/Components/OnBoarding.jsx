@@ -74,34 +74,34 @@ const OnBoarding = () => {
         }),
     };
     return (
-        <div className="w-full py-20 px-8 !mt-12 max-h-[1510px]:">
+        <div className="w-full py-12 md:py-20 px-4 md:px-8 !mt-6 md:!mt-12">
 
-            <div className="text-center mb-16">
-                <h1 className="text-[#33643F] text-[44px] font-bold font-dm-sans">
+            <div className="text-center mb-12 md:mb-16 flex justify-center flex-col items-center">
+                <h1 className="text-[#33643F] text-[32px] md:text-[40px] lg:text-[44px] font-bold font-dm-sans leading-tight">
                     Join Our Circle of Care
                 </h1>
-                <p className="font-dm-sans text-[22px] text-[#4C4C4C] mt-2">
+                <p className="font-dm-sans text-[18px] md:text-[20px] lg:text-[22px] text-[#4C4C4C] mt-3 max-w-[600px] mx-auto">
                     Becoming a part of Amrutam is simple
                 </p>
             </div>
 
-            <div className="w-full !mt-[52px] flex justify-around items-center">
-                <div className="!mt-[32px]">
+            <div className="w-full !mt-8 md:!mt-[52px] flex flex-col lg:flex-row justify-center items-center gap-12 lg:gap-16">
+                <div className="w-full max-w-[500px] lg:max-w-none lg:w-[579px]">
                     {
                         STEPS.map((step, idx) => (
-                            <div key={idx} className="group w-[579px] h-[110px] border border-[#3A643C] rounded-[8px] flex justify-center flex-col !pl-8 !mb-[18px] hover:bg-[#33643F] transition-all duration-700 ease-in-out">
-                                <h1 className="!mb-[10px] text-[#3A643C] font-dm-sans font-extrabold text-[20px] group-hover:text-white">{step.step}</h1>
-                                <p className="font-dm-sans font-medium text-[#3A643C] text-[14px] group-hover:text-white">{step.desc}</p>
+                            <div key={idx} className="group w-full border border-[#3A643C] rounded-[8px] flex justify-center flex-col !pl-6 md:!pl-8 !py-5 md:!py-6 !mb-4 md:!mb-[18px] hover:bg-[#33643F] transition-all duration-700 ease-in-out">
+                                <h1 className="!mb-2 md:!mb-[10px] text-[#3A643C] font-dm-sans font-extrabold text-[18px] md:text-[20px] group-hover:text-white text-center lg:text-left">{step.step}</h1>
+                                <p className="font-dm-sans font-medium text-[#3A643C] text-[14px] md:text-[14px] group-hover:text-white text-center lg:text-left leading-relaxed">{step.desc}</p>
                             </div>
                         ))
                     }
                 </div>
-                <div className="relative w-full max-w-[645px] flex items-center justify-center">
+                <div className="relative w-full max-w-[350px] md:max-w-[500px] lg:max-w-[645px] flex items-center justify-center">
                     {/* Illus background (shifted up so it's half visible) */}
                     <img
                         src={Illus}
                         alt="Illustration"
-                        className="absolute -top-20 w-[110%] h-auto object-contain z-0"
+                        className="absolute -top-8 md:-top-16 lg:-top-20 w-[110%] h-auto object-contain z-0"
                     />
 
                     {/* Example foreground (main image) */}
@@ -113,14 +113,14 @@ const OnBoarding = () => {
                 </div>
             </div>
 
-            <div className="w-full flex justify-center flex-col items-center !mt-[38px] relative">
+            <div className="w-full flex justify-center flex-col items-center !mt-12 md:!mt-[38px] relative">
                 {/* Buttons */}
-                <div className="flex justify-between items-center h-[48px] w-[562px]">
+                <div className="flex flex-col sm:flex-row justify-center items-center gap-4 sm:gap-6 w-full max-w-[600px]">
                     {ONBOARDING_BTNs.map((btn, idx) => (
                         <button
                             key={idx}
                             onClick={() => handleClick(btn.btn)}
-                            className={`h-[48px] border border-[#3A643C] rounded-[8px] !p-[12px] max-w-[219px] font-dm-sans text-[#3A643C] transition-all duration-700 ease-in-out
+                            className={`h-[48px] border border-[#3A643C] rounded-[8px] !px-6 md:!px-[12px] !py-3 md:!py-[12px] w-full sm:w-auto min-w-[200px] font-dm-sans text-[#3A643C] transition-all duration-700 ease-in-out
                                     ${selected === btn.btn
                                     ? "bg-[#33643F] text-white"
                                     : "text-[#3A643C] bg-transparent"
@@ -131,7 +131,7 @@ const OnBoarding = () => {
                     ))}
                 </div>
                 {/* Animated Sections */}
-                <div className="relative w-[1240px] h-[560px] !mt-[28px] overflow-hidden">
+                <div className="relative w-full max-w-[1200px] h-[600px] md:h-[560px] !mt-8 md:!mt-[28px] overflow-hidden">
                     <AnimatePresence custom={direction} mode="wait">
                         {selected === "Consultation" && (
                             <motion.div
@@ -141,36 +141,36 @@ const OnBoarding = () => {
                                 initial="enter"
                                 animate="center"
                                 exit="exit"
-                                className="flex flex-row w-full h-full justify-between items-center"
+                                className="flex flex-col lg:flex-row w-full h-full justify-center lg:justify-between items-center gap-8 lg:gap-4"
                             >
-                                <div className="!mt-[79px] mr-[156px]">
-                                    <h1 className="text-center text-[#3A643C] font-dm-sans font-bold text-2xl">
+                                <div className="flex flex-col items-center text-center">
+                                    <h1 className="text-[#3A643C] font-dm-sans font-bold text-xl md:text-2xl mb-4">
                                         Value Your Practice
                                     </h1>
                                     <img
                                         src={Iphone1}
                                         alt=""
-                                        className="w-[216px] h-[435px] !ml-[22px] !mt-[16px]"
+                                        className="w-[180px] md:w-[200px] lg:w-[216px] h-[350px] md:h-[400px] lg:h-[435px] object-contain"
                                     />
                                 </div>
-                                <div>
+                                <div className="flex flex-col items-center text-center">
                                     <img
                                         src={Iphone2}
                                         alt=""
-                                        className="w-[216px] h-[435px] !ml-[48px]"
+                                        className="w-[180px] md:w-[200px] lg:w-[216px] h-[350px] md:h-[400px] lg:h-[435px] object-contain mb-4"
                                     />
-                                    <h1 className="text-center text-[#3A643C] font-dm-sans font-bold text-2xl !mt-4">
+                                    <h1 className="text-[#3A643C] font-dm-sans font-bold text-xl md:text-2xl">
                                         Today's Healing Journey
                                     </h1>
                                 </div>
-                                <div className="!mt-[79px]">
-                                    <h1 className="text-center text-[#3A643C] font-dm-sans font-bold text-2xl">
+                                <div className="flex flex-col items-center text-center">
+                                    <h1 className="text-[#3A643C] font-dm-sans font-bold text-xl md:text-2xl mb-4">
                                         Consultation Details
                                     </h1>
                                     <img
                                         src={Iphone3}
                                         alt=""
-                                        className="w-[216px] h-[435px] !ml-[24px] !mt-[16px]"
+                                        className="w-[180px] md:w-[200px] lg:w-[216px] h-[350px] md:h-[400px] lg:h-[435px] object-contain"
                                     />
                                 </div>
                             </motion.div>
@@ -184,36 +184,36 @@ const OnBoarding = () => {
                                 initial="enter"
                                 animate="center"
                                 exit="exit"
-                                className="flex flex-row w-full h-full justify-between items-center"
+                                className="flex flex-col lg:flex-row w-full h-full justify-center lg:justify-between items-center gap-8 lg:gap-4"
                             >
-                                <div className="!mt-[79px] mr-[156px]">
-                                    <h1 className="text-center text-[#3A643C] font-dm-sans font-bold text-2xl">
+                                <div className="flex flex-col items-center text-center">
+                                    <h1 className="text-[#3A643C] font-dm-sans font-bold text-xl md:text-2xl mb-4">
                                         Your Earnings
                                     </h1>
                                     <img
                                         src={PaymentIphone1}
                                         alt=""
-                                        className="w-[216px] h-[435px] !ml-[22px] !mt-[16px]"
+                                        className="w-[180px] md:w-[200px] lg:w-[216px] h-[350px] md:h-[400px] lg:h-[435px] object-contain"
                                     />
                                 </div>
-                                <div>
+                                <div className="flex flex-col items-center text-center">
                                     <img
                                         src={PaymentIphone2}
                                         alt=""
-                                        className="w-[216px] h-[435px] !ml-[30px]"
+                                        className="w-[180px] md:w-[200px] lg:w-[216px] h-[350px] md:h-[400px] lg:h-[435px] object-contain mb-4"
                                     />
-                                    <h1 className="text-center text-[#3A643C] font-dm-sans font-bold text-2xl !mt-4">
+                                    <h1 className="text-[#3A643C] font-dm-sans font-bold text-xl md:text-2xl">
                                         Trusted Transfers
                                     </h1>
                                 </div>
-                                <div className="!mt-[79px]">
-                                    <h1 className="text-center text-[#3A643C] font-dm-sans font-bold text-2xl">
+                                <div className="flex flex-col items-center text-center">
+                                    <h1 className="text-[#3A643C] font-dm-sans font-bold text-xl md:text-2xl mb-4">
                                         Smooth Settlement
                                     </h1>
                                     <img
                                         src={PaymentIphone3}
                                         alt=""
-                                        className="w-[216px] h-[435px] !ml-[24px] !mt-[16px]"
+                                        className="w-[180px] md:w-[200px] lg:w-[216px] h-[350px] md:h-[400px] lg:h-[435px] object-contain"
                                     />
                                 </div>
                             </motion.div>
@@ -227,36 +227,36 @@ const OnBoarding = () => {
                                 initial="enter"
                                 animate="center"
                                 exit="exit"
-                                className="flex flex-row w-full h-full justify-between items-center"
+                                className="flex flex-col lg:flex-row w-full h-full justify-center lg:justify-between items-center gap-8 lg:gap-4"
                             >
-                                <div className="!mt-[79px] mr-[156px]">
-                                    <h1 className="text-center text-[#3A643C] font-dm-sans font-bold text-2xl">
+                                <div className="flex flex-col items-center text-center">
+                                    <h1 className="text-[#3A643C] font-dm-sans font-bold text-xl md:text-2xl mb-4">
                                         Choose Your Perfect Date
                                     </h1>
                                     <img
                                         src={ScheIphone1}
                                         alt=""
-                                        className="w-[216px] h-[435px] !ml-[22px] !mt-[16px]"
+                                        className="w-[180px] md:w-[200px] lg:w-[216px] h-[350px] md:h-[400px] lg:h-[435px] object-contain"
                                     />
                                 </div>
-                                <div>
+                                <div className="flex flex-col items-center text-center">
                                     <img
                                         src={ScheIphone3}
                                         alt=""
-                                        className="w-[216px] h-[435px] !ml-[48px]"
+                                        className="w-[180px] md:w-[200px] lg:w-[216px] h-[350px] md:h-[400px] lg:h-[435px] object-contain mb-4"
                                     />
-                                    <h1 className="text-center text-[#3A643C] font-dm-sans font-bold text-2xl !mt-4">
+                                    <h1 className="text-[#3A643C] font-dm-sans font-bold text-xl md:text-2xl">
                                         Time That Works For You
                                     </h1>
                                 </div>
-                                <div className="!mt-[79px]">
-                                    <h1 className="text-center text-[#3A643C] font-dm-sans font-bold text-2xl">
+                                <div className="flex flex-col items-center text-center">
+                                    <h1 className="text-[#3A643C] font-dm-sans font-bold text-xl md:text-2xl mb-4">
                                         Effortless Overview
                                     </h1>
                                     <img
                                         src={ScheIphone2}
                                         alt=""
-                                        className="w-[216px] h-[435px] !ml-[24px] !mt-[16px]"
+                                        className="w-[180px] md:w-[200px] lg:w-[216px] h-[350px] md:h-[400px] lg:h-[435px] object-contain"
                                     />
                                 </div>
                             </motion.div>
@@ -264,8 +264,8 @@ const OnBoarding = () => {
                     </AnimatePresence>
                 </div>
             </div>
-            <div className="flex items-center justify-center !mt-[38px] w-full">
-                <button className="bg-[#3A643C] text-white px-7 py-7 w-[161px] h-[56px] rounded-[12px] font-semibold shadow-lg hover:bg-green-800 transition !ml-[10px]">
+            <div className="flex items-center justify-center !mt-12 md:!mt-[38px] w-full">
+                <button className="bg-[#3A643C] text-white px-8 md:px-7 py-4 md:py-7 w-full max-w-[300px] md:w-[161px] h-[56px] rounded-[12px] font-semibold shadow-lg hover:bg-green-800 transition">
                     Join Now
                 </button>
             </div>

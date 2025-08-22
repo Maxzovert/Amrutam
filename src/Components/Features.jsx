@@ -22,19 +22,19 @@ const Features = () => {
         { logos: C_9 },
     ]
     return (
-        <section className="w-full h-[300px] flex flex-col items-center gap-1">
-            <div className="!mt-8 flex flex-col justify-center items-center">
-                <h1 className="text-[#33643F] text-[40px] font-bold font-dm-sans">Featured</h1>
-                <p className="font-dm-sans text-[20px] text-[#4C4C4C]">Recognized and celebrated by leading publications – Amrutam in the spotlight!</p>
+        <section className="w-full min-h-[300px] flex flex-col items-center gap-1 px-4 md:px-0">
+            <div className="!mt-8 flex flex-col justify-center items-center text-center">
+                <h1 className="text-[#33643F] text-[28px] md:text-[32px] lg:text-[40px] font-bold font-dm-sans">Featured</h1>
+                <p className="font-dm-sans text-[16px] md:text-[18px] lg:text-[20px] text-[#4C4C4C] max-w-[600px] leading-relaxed">Recognized and celebrated by leading publications – Amrutam in the spotlight!</p>
             </div>
-            <div className="flex w-full max-h-[96px] items-center justify-around !mt-12">
+            <div className="flex flex-wrap w-full max-h-none md:max-h-[96px] items-center justify-center md:justify-around gap-4 md:gap-0 !mt-8 md:!mt-12">
                 {
                     BRANDS.map((logo, index) => (
                             <img
                                 key={index}
                                 src={logo.logos}
                                 alt={index}
-                                className="w-[148px] h-[96px]"
+                                className="w-[100px] h-[64px] md:w-[120px] md:h-[78px] lg:w-[148px] lg:h-[96px] object-contain"
                             />
                     ))
                 }
